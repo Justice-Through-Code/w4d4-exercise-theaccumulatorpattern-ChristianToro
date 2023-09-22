@@ -17,18 +17,22 @@
     22.357142857142858
 
 '''
-
+# Worked on this assignment with pod members Jay Y, Bennett Lawler Jr., and Donald Sellers
 from typing import List
 
 def calculate_average_temperature(temperatures: List[float]) -> float:
      # 1.1 TODO: # Initialize an accumulator variable to keep track of the sum of temperatures.
-   
+    accumulator = 0
     
     # 1.2 TODO:# Iterate through the `temperatures` list, updating the accumulator with the current temperature.
+    for temp in temperatures:
+        accumulator += temp
 
-    
+# Jay's idea of utilizing this catch in case the imported list is empty; which would mean undefined quotient results
+    if len(temperatures) == 0:
+        return None
     # 1.3 TODO: # Calculate and return the average temperature using the accumulated sum and the total number of readings.
-
+    return (accumulator/ len(temperatures))
 
     
     # 1.3 TODO: return the average temperature
